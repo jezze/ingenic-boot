@@ -105,7 +105,7 @@ int sd_card_program(struct ingenic_dev *ingenic_dev, unsigned int addr,
 	unsigned int download_times, block_nums;
 	unsigned int last_download_block_num, last_block_len;
 	unsigned int i;
-	char *origin_data, *readback_data;
+	char *origin_data, *readback_data = 0;
 	int retval;
 
 	retval = stat(file_path, &fstat);

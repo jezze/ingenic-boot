@@ -148,4 +148,9 @@ enum OPTION
 
 /*-------------------------------------------------------------------------*/
 
+int sd_card_init(struct ingenic_dev *ingenic_dev);
+int usb_ingenic_nand_ops(struct ingenic_dev *ingenic_dev, int ops);
+int sd_card_program(struct ingenic_dev *ingenic_dev, unsigned int addr,
+		    const char *file_path, int check);
+
 #endif	/*__STAGE2_CMD_TOOL_H__ */

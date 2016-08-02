@@ -303,7 +303,7 @@ int usb_send_data_address_to_ingenic(struct ingenic_dev *ingenic_dev,
 }
 
 int usb_send_data_to_ingenic(struct ingenic_dev *ingenic_dev,
-			     unsigned char *buff, unsigned int len)
+			     const char *buff, unsigned int len)
 {
 	int status;
 	status = usb_bulk_write(ingenic_dev->usb_handle,
@@ -321,7 +321,7 @@ int usb_send_data_to_ingenic(struct ingenic_dev *ingenic_dev,
 }
 
 int usb_read_data_from_ingenic(struct ingenic_dev *ingenic_dev,
-			       unsigned char *buff, unsigned int len)
+			       char *buff, unsigned int len)
 {
 	int status;
 	status = usb_bulk_read(ingenic_dev->usb_handle,
